@@ -1,0 +1,32 @@
+.email {
+  margin-top: -10rem;
+  
+
+  .container {
+    position: relative;
+    background-color: $darkblue1;
+    border-radius: 0.25rem;
+    box-shadow: 1.1875rem 1.1875rem 0.9375rem 0.1875rem rgba(0, 0, 0, 0.1);
+    //outline: 1px solid red;
+    padding: 3rem;
+    gap: 1.5rem;
+    max-width: 45rem;
+    z-index: 1;
+  }
+
+  p {
+    max-width: 50rem;
+    line-height: 2;
+  }
+  &__application {
+     display: flex;
+     flex-direction: column;
+
+     input {
+      padding: 0.8735rem 1rem;
+      border-radius: 1.5625rem;
+      border: none;
+      margin-bottom: 1rem;
+     }
+  }
+}

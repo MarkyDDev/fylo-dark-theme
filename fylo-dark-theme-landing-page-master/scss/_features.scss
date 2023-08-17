@@ -1,0 +1,28 @@
+.features {
+  background-color: $darkblue2;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1;
+  margin-top: -1rem;
+
+  &__item {
+    margin-bottom: 1rem;
+    max-width: 20rem;
+    z-index: 2;
+  }
+
+  &__img {
+    position: relative;
+    padding: 1.875rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-bottom: 0.625rem;
+  }
+
+  &__title {
+    margin-bottom: 0.7rem;
+  }
+}
+
+//how to center child element in a grd?

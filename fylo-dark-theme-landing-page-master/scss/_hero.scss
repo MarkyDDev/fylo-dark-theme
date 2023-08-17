@@ -1,0 +1,78 @@
+.hero {
+  background-color: $darkblue1;
+
+  &__container {
+    z-index: 2;
+  }
+
+  &__image {
+    //outline: 1px solid red;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+
+    img {
+      width: 50%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    @include breakpoint-up(large) {
+      max-width: 44rem;
+    }
+    //outline: 1px solid red;
+    h1 {
+      margin-bottom: 1.5rem;
+      @include breakpoint-up(large) {
+        font-size: $font-xlarge;
+      }
+    }
+
+    p {
+      margin-bottom: 3rem;
+      @include breakpoint-up(large) {
+        font-size: $font-med;
+      }
+    }
+  }
+
+  &__backgroundImage {
+    position: relative;
+    min-height: 10rem;
+    width: 100%;
+    background-image: url("/fylo-dark-theme-landing-page-master/images/bg-curvy-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    @include breakpoint-up(large) {
+      background-image: url("/fylo-dark-theme-landing-page-master/images/bg-curvy-desktop.svg");
+      width: 100%;
+      min-height: 20rem;
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
+    @include breakpoint-up(medium) {
+      background-image: url("/fylo-dark-theme-landing-page-master/images/bg-curvy-desktop.svg");
+      width: 100%;
+      min-height: 20rem;
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.curve {
+  background-color: $darkblue1;
+  
+
+  img {
+    width: 100%;
+    margin-top: -15rem;
+    background-size: cover;
+  }
+}

@@ -20,6 +20,30 @@ html {
   box-sizing: inherit;
 }
 
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: $white;
+  font-size: $font-med;
+}
+
+h1 {
+  font-size: $font-med;
+  margin: 0;
+}
+
+h2 {
+  font-size: $font-med;
+  margin: 0;
+}
+
+p {
+  font-size: $font-small;
+  margin: 0;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -28,4 +52,90 @@ body {
   color: $white;
   font-weight: 300;
   line-height: 1.3;
+  min-height: 400vh;
+  background-color: $darkblue1;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+
+  &--paddingall {
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    padding-right: 1.5rem;
+  }
+}
+
+// FLEX
+.flex {
+  display: flex;
+  text-align: center;
+  &-f-d-col {
+    flex-direction: column;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-space-bt {
+    justify-content: space-between;
+  }
+}
+
+//GRID
+
+.grid {
+  display: grid;
+  grid-template-columns: 1;
+  //text-align: center;
+  justify-items: center;
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    //grid-template-rows: repeat(2, 1fr);
+    //text-align: center;
+    gap: 1.8rem;
+  }
+
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(2, 1fr);
+    //grid-template-rows: repeat(2, 1fr);
+    //text-align: center;
+    gap: 2.1rem;
+  }
+}
+
+//SECTION BACKGROUND
+
+.section-bg {
+  background-image: url("/fylo-dark-theme-landing-page-master/images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+}
+
+//CTA
+
+button {
+  background: linear-gradient(to right, $cyan, $darkcyan);
+  color: $white;
+  font-size: $font-small;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8375rem 4.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: $cyan;
+}
+
+button:active {
+  transform: translate(1px, 1px);
 }
